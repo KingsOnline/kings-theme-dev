@@ -1,0 +1,62 @@
+/* Button
+   ========================================================================== */
+
+/**
+ * The secondary button style serves as the main style used in KEATS as red
+ * is not suitable for an e-learning environment. The tertiary style is then
+ * used for secondary actions.
+ */
+
+.btn {
+  @extend %h6;
+  text-decoration: none;
+  padding: 12px 24px;
+  &:not(:disabled) {
+    &.btn-primary {
+      background-color: $sea-blue;
+      color: $white;
+      &:hover {
+        background-color: $reflex-blue;
+      }
+      &:active {
+        border: 2px solid $reflex-blue;
+      }
+    }
+    &.btn-secondary {
+      background-color: $white;
+      border: 2px solid $sea-blue;
+      color: $sea-blue;
+      &:hover,
+      &:active {
+        border-color: $reflex-blue;
+        color: $reflex-blue;
+      }
+      &:hover {
+        background-color: tint($sea-blue, 80%);
+      }
+      &:active {
+        background-color: $white;
+      }
+    }
+    &.btn-lg {
+      padding: 18px 24px;
+    }
+    &.btn-sm {
+      padding: 8px 24px;
+    }
+    &:focus {
+      border: 3px solid $black;
+      box-shadow: none;
+      outline: 5px solid $focus-colour;
+      outline-offset: 0;
+    }
+  }
+  &:disabled {
+    background: shade($panel-grey, 20%);
+    border: 1px solid $powder-blue;
+    color: shade($panel-grey, 80%);
+  }
+  &:not(:last-child) {
+    margin-right: $component-margin;
+  }
+}

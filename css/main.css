@@ -97,7 +97,7 @@ h3, .h3 {
 }
 
 h4, h5, h6,
-.h4, .h5, .h6 {
+.h4, .h5, .h6, .btn {
   font-weight: bold;
   color: #2E2E2E;
 }
@@ -142,7 +142,7 @@ h5, .h5 {
 
 /* Woolf
    ========================================================================== */
-h6, .h6 {
+h6, .h6, .btn {
   font-size: 18px;
   line-height: 1.5;
 }
@@ -202,4 +202,73 @@ p, .large-p, .bold-p {
   font-style: normal;
   cursor: default;
   pointer-events: none;
+}
+
+/* Button
+   ========================================================================== */
+/**
+ * The secondary button style serves as the main style used in KEATS as red
+ * is not suitable for an e-learning environment. The tertiary style is then
+ * used for secondary actions.
+ */
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+}
+
+.btn:not(:disabled).btn-primary {
+  background-color: #005AD2;
+  color: #FFFFFF;
+}
+
+.btn:not(:disabled).btn-primary:hover {
+  background-color: #002395;
+}
+
+.btn:not(:disabled).btn-primary:active {
+  border: 2px solid #002395;
+}
+
+.btn:not(:disabled).btn-secondary {
+  background-color: #FFFFFF;
+  border: 2px solid #005AD2;
+  color: #005AD2;
+}
+
+.btn:not(:disabled).btn-secondary:hover, .btn:not(:disabled).btn-secondary:active {
+  border-color: #002395;
+  color: #002395;
+}
+
+.btn:not(:disabled).btn-secondary:hover {
+  background-color: #ccdef6;
+}
+
+.btn:not(:disabled).btn-secondary:active {
+  background-color: #FFFFFF;
+}
+
+.btn:not(:disabled).btn-lg {
+  padding: 18px 24px;
+}
+
+.btn:not(:disabled).btn-sm {
+  padding: 8px 24px;
+}
+
+.btn:not(:disabled):focus {
+  border: 3px solid #000000;
+  box-shadow: none;
+  outline: 5px solid #08F6CC;
+  outline-offset: 0;
+}
+
+.btn:disabled {
+  background: #bbbfc0;
+  border: 1px solid #8295B5;
+  color: #2f3030;
+}
+
+.btn:not(:last-child) {
+  margin-right: 1.5rem;
 }
