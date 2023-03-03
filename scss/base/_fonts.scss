@@ -1,0 +1,20 @@
+/* Fonts
+   ========================================================================== */
+
+/**
+ * King's Caslon 
+ * Primary font used for larger headings
+ */
+ 
+@font-face {
+  font-family: "KingsCaslon";
+  src: url("https://git.iddkingsonline.com/assets/fonts/KingsCaslon-tff.ttf") format("truetype");
+  font-style: normal;
+}
+
+/**
+ * Open Sans 
+ * Secondary font used for smaller headings and body text
+ * Embedded via addition HTML
+ */
+ 
